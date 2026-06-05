@@ -7,7 +7,7 @@ UAE-based (Abu Dhabi) .NET professional with **5+ years** of experience deliveri
 - **Currently**: Senior .NET Developer at Smart Works for Information Systems (Abu Dhabi)
 - **Open to**: GCC / Europe opportunities (Immediate joiner)
 - **Email**: faizmuhammadmarri@gmail.com | **Phone**: +92 303 2213801
-- **LinkedIn**: [linkedin.com/in/faiz-mari](https://linkedin.com/in/faiz-mari) | **CV**: [Download](https://github.com/Fai-M-Mari/Fai-M-Mari/blob/main/Faiz_Muhammad_NET_Developer_CV.pdf) *(add your CV PDF here)*
+- **LinkedIn**: [linkedin.com/in/faiz-mari](https://linkedin.com/in/faiz-mari) | **CV**: [Download](https://github.com/Fai-M-Mari/Fai-M-Mari/blob/main/Faiz_Muhammad_NET_Developer_CV.pdf)
 
 ---
 
@@ -47,6 +47,70 @@ UAE-based (Abu Dhabi) .NET professional with **5+ years** of experience deliveri
 
 ---
 
+### 🌟 Featured Projects
+
+#### 1. **[RES_System](https://github.com/Fai-M-Mari/RES_System)** - Multi-Tenant Real Estate Management System
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+- **Tech Stack**: ASP.NET Core, Entity Framework Core, SQL Server, Angular
+- **Architecture**: Microservices with Multi-Tenant support
+- **Features**: 
+  - Property management & listing
+  - Tenant & lease management
+  - Automated billing & payments
+  - Real-time notifications
+  - Role-based access control (RBAC)
+- **Impact**: Simplified real estate operations for multiple organizations simultaneously
+
+#### 2. **[EmailSenderAPI](https://github.com/Fai-M-Mari/EmailSenderAPI)** - Enterprise Email Service
+![Status](https://img.shields.io/badge/Status-Production-blue)
+- **Tech Stack**: ASP.NET Core, SendGrid Integration, Redis Caching
+- **Features**:
+  - RESTful API for email distribution
+  - Template-based email generation
+  - Async processing with queuing
+  - Delivery tracking & logging
+  - Retry mechanism for failed sends
+- **Use Cases**: Transactional emails, bulk campaigns, notifications
+
+#### 3. **[EmailExtractionFrmSites_Tool](https://github.com/Fai-M-Mari/EmailExtractionFrmSites_Tool)** - Web Scraping Utility
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+- **Tech Stack**: C#, Web Scraping, Regex Pattern Matching
+- **Functionality**:
+  - Extracts contact information from websites
+  - Supports multiple domain patterns
+  - CSV export capability
+  - Batch processing
+- **Application**: Sales & marketing lead generation
+
+#### 4. **[Mess-Managment-System](https://github.com/Fai-M-Mari/Mess-Managment-System)** - University Hostel Finance Management
+![Status](https://img.shields.io/badge/Status-Archived-lightgrey)
+- **Tech Stack**: C#, Windows Forms, SQL Server
+- **Features**:
+  - Admin & user registration
+  - Daily investment tracking
+  - Per-member balance calculations
+  - Expense summary reports
+  - Automated dues calculation
+- **Impact**: Simplified financial management for 50+ students across multiple messes
+- **Year**: 2020 - University Project
+
+#### 5. **[Rdlc_Demo](https://github.com/Fai-M-Mari/Rdlc_Demo)** - Reporting & Analytics Demo
+![Status](https://img.shields.io/badge/Status-Reference-orange)
+- **Tech Stack**: RDLC Reports, SQL Server, C#
+- **Purpose**: 
+  - Advanced reporting implementation
+  - Drill-down reports
+  - Chart visualizations
+  - Export to PDF/Excel
+
+#### 6. **[SindhiBarth](https://github.com/Fai-M-Mari/SindhiBarth)** - Cultural Event Platform
+![Status](https://img.shields.io/badge/Status-Archived-lightgrey)
+- **Tech Stack**: JavaScript, HTML5, CSS3, Node.js Backend
+- **Features**: Event booking, user management, cultural content showcase
+- **Year**: 2022 - Community Project
+
+---
+
 ### 📊 GitHub Stats
 
 ![Faiz's GitHub stats](https://github-readme-stats.vercel.app/api?username=Fai-M-Mari&show_icons=true&theme=radical)
@@ -55,12 +119,53 @@ UAE-based (Abu Dhabi) .NET professional with **5+ years** of experience deliveri
 
 ---
 
-### 🌟 Featured Projects
-- [Your best .NET / payment / government project repos] — Pin 4–6 strong repos on your profile.
-- Mess Management System, RDLC Demo, etc. (update descriptions with modern tech where possible).
+### 📈 Repository Statistics
+| Project | Language | Status | Stars | Forks |
+|---------|----------|--------|-------|-------|
+| [RES_System](https://github.com/Fai-M-Mari/RES_System) | HTML/ASP.NET | Active | ⭐ | 🍴 |
+| [EmailSenderAPI](https://github.com/Fai-M-Mari/EmailSenderAPI) | C# | Production | ⭐ | 🍴 |
+| [EmailExtractionFrmSites_Tool](https://github.com/Fai-M-Mari/EmailExtractionFrmSites_Tool) | C# | Active | ⭐ | 🍴 |
+| [Mess-Managment-System](https://github.com/Fai-M-Mari/Mess-Managment-System) | C# | Archived | ⭐ | 🍴 |
+| [Rdlc_Demo](https://github.com/Fai-M-Mari/Rdlc_Demo) | JavaScript | Reference | ⭐ | 🍴 |
+| [SindhiBarth](https://github.com/Fai-M-Mari/SindhiBarth) | JavaScript | Community | ⭐ | 🍴 |
+
+---
+
+### 🎯 Core Competencies
+✅ **Backend Development**: ASP.NET Core, Entity Framework Core, Microservices, Clean Architecture  
+✅ **Database Design**: SQL Server, Oracle, T-SQL Optimization, Indexing Strategies  
+✅ **Cloud Infrastructure**: Azure (App Service, Functions, Service Bus, DevOps)  
+✅ **Payment Integration**: PCI-DSS Compliance, Multiple Gateway Integration  
+✅ **API Development**: RESTful APIs, CQRS Pattern, MediatR, SignalR  
+✅ **DevOps**: Docker, CI/CD Pipelines, Azure DevOps, GitHub Actions  
+✅ **Software Architecture**: Design Patterns, SOLID Principles, Scalable Systems
+
+---
+
+### 📚 Currently Learning
+- Advanced Microservices Patterns
+- Kubernetes & Container Orchestration
+- Machine Learning with .NET ML
+- Event-Driven Architecture
+
+---
+
+### 🤝 Let's Collaborate!
+I'm passionate about:
+- Building **secure, scalable, and maintainable** enterprise systems
+- **Payment & fintech** solutions
+- **Government & banking** sector projects
+- Mentoring junior developers
+- Open-source contributions in the .NET ecosystem
+
+**Feel free to reach out for:**
+- Consulting on .NET architecture
+- Payment gateway integration
+- Performance optimization
+- Technical discussions
 
 ---
 
 **"Passionate about building secure, scalable, and maintainable systems that drive real business impact."**
 
-Open to collaboration on .NET, Azure, or fintech projects!
+Open to collaboration on .NET, Azure, or fintech projects! 🚀
