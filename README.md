@@ -2,7 +2,7 @@
 
 **Senior .NET Developer | ASP.NET Core | Microservices | Azure | Payment Integrations**
 
-UAE-based (Abu Dhabi) .NET professional with **5+ years** of experience delivering scalable enterprise solutions for government, banking, and fintech clients.
+ .NET professional with **5+ years** of experience delivering scalable enterprise solutions for government, banking, and fintech clients.
 
 - **Currently**: Senior .NET Developer at Smart Works for Information Systems (Abu Dhabi)
 - **Open to**: GCC / Europe opportunities (Immediate joiner)
