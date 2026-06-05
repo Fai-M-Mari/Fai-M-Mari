@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faiz Muhammad | Senior .NET Developer | Portfolio</title>
-    <meta name="description" content="Premium portfolio of Faiz Muhammad - Senior .NET Developer specializing in ASP.NET Core, Microservices, Azure, and Payment Integrations.">
+    <meta name="description" content="Senior .NET Developer with 5+ years of expertise in ASP.NET Core, Microservices, Azure, and Payment Integrations. UAE-based candidate open to GCC and Europe.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -58,25 +58,6 @@
 
         .gradient-bg {
             background: linear-gradient(135deg, #512BD4 0%, #0078D4 100%);
-        }
-
-        .gradient-border {
-            position: relative;
-            background: linear-gradient(135deg, #0f0f1e, #1a1a2e);
-            border: 2px solid transparent;
-            background-clip: padding-box;
-        }
-
-        .gradient-border::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(135deg, #512BD4, #0078D4, #00B4D8);
-            border-radius: 20px;
-            z-index: -1;
         }
 
         /* Navigation */
@@ -307,18 +288,12 @@
         }
 
         /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
         .about-card {
             glass;
             padding: 2rem;
             border-radius: 20px;
             transition: all 0.3s ease;
+            margin-bottom: 2rem;
         }
 
         .about-card:hover {
@@ -326,21 +301,10 @@
             background: rgba(255, 255, 255, 0.08);
         }
 
-        .about-card h3 {
-            color: #00B4D8;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .about-card p {
-            color: #c0c0c0;
-            line-height: 1.8;
-        }
-
         /* Achievement Cards */
         .achievement-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
         }
 
@@ -348,10 +312,10 @@
             glass;
             padding: 2rem;
             border-radius: 15px;
-            text-align: center;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            border-left: 4px solid #512BD4;
         }
 
         .achievement-card::before {
@@ -375,25 +339,16 @@
             opacity: 1;
         }
 
-        .achievement-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #512BD4, #00B4D8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        .achievement-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #ffffff;
+        .achievement-icon {
+            font-size: 2rem;
+            color: #00B4D8;
+            margin-bottom: 1rem;
         }
 
         .achievement-desc {
-            font-size: 0.9rem;
-            color: #a0a0a0;
+            font-size: 0.95rem;
+            color: #c0c0c0;
+            line-height: 1.6;
         }
 
         /* Skills Section */
@@ -443,11 +398,6 @@
         }
 
         /* Experience Section */
-        .experience-timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
         .experience-item {
             glass;
             padding: 2rem;
@@ -646,6 +596,10 @@
             .cta-title {
                 font-size: 1.8rem;
             }
+
+            .experience-header {
+                flex-direction: column;
+            }
         }
 
         /* Animations */
@@ -695,6 +649,7 @@
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
@@ -709,13 +664,14 @@
             <h1>Faiz Muhammad</h1>
             <p class="subtitle">Senior .NET Developer</p>
             <p class="tagline">ASP.NET Core | Microservices | Azure | Payment Integrations</p>
+            <p class="tagline" style="color: #7a7a7a; margin-bottom: 2rem;">5+ Years Full-Stack Development | UAE-Based | Open to GCC & Europe</p>
             
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">
                     <i class="fas fa-envelope"></i> Get in Touch
                 </a>
-                <a href="#" class="btn btn-secondary">
-                    <i class="fas fa-download"></i> Download CV
+                <a href="mailto:faizmuhammadmarri@gmail.com?subject=Resume%20Request" class="btn btn-secondary">
+                    <i class="fas fa-download"></i> Request Resume
                 </a>
             </div>
 
@@ -732,53 +688,50 @@
             </div>
 
             <p style="color: #a0a0a0; margin-top: 3rem; font-size: 0.9rem;">
-                📍 Abu Dhabi, UAE | Open to GCC & Europe
+                📍 Karachi, Pakistan (UAE-Based) | Open for immediate relocation
             </p>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h2 class="section-title gradient-text">About Me</h2>
-        <p class="section-subtitle">Professional Summary & Key Metrics</p>
+        <h2 class="section-title gradient-text">Professional Summary</h2>
+        <p class="section-subtitle">5+ Years of Enterprise .NET Development Excellence</p>
+        
+        <div class="about-card">
+            <p style="color: #c0c0c0; line-height: 1.8;">
+                .NET 8 Developer with 5+ years of full-stack experience delivering scalable enterprise solutions across UAE government, banking, and fintech domains. 
+                <br><br>
+                Proven expertise in ASP.NET Core Web APIs, Microservices, Clean Architecture, and payment gateway integrations (Stripe, Ngenius, UAE Pay, Naqodi). 
+                <br><br>
+                Experienced in legacy system modernization, CI/CD with Azure DevOps, and high-impact optimization delivering measurable business results. 
+                <br><br>
+                <strong style="color: #00B4D8;">Immediate joiner — UAE-based candidate open to GCC and European opportunities.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Key Achievements Section -->
+    <section id="achievements">
+        <h2 class="section-title gradient-text">Key Achievements</h2>
+        <p class="section-subtitle">Measurable Impact Across Multiple Domains</p>
         
         <div class="achievement-grid">
-            <div class="achievement-card">
-                <div class="achievement-number">10+</div>
-                <div class="achievement-title">Years Experience</div>
-                <div class="achievement-desc">Crafting enterprise-level solutions</div>
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">⚡</div>
+                <p class="achievement-desc"><strong style="color: #00B4D8;">97% Runtime Improvement</strong><br>Reduced banking blacklist verification from 4+ hours to under 10 minutes at HBL Innovation Center through SQL Server indexing and async .NET refactoring.</p>
             </div>
-            <div class="achievement-card">
-                <div class="achievement-number">50+</div>
-                <div class="achievement-title">Projects Delivered</div>
-                <div class="achievement-desc">Across fintech, e-commerce & SaaS</div>
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">💳</div>
+                <p class="achievement-desc"><strong style="color: #00B4D8;">4-Gateway Payment Integration</strong><br>Delivered Ngenius, UAE Pay, Stripe, Naqodi integration for UAE government SZF events with PCI-DSS compliance and zero transaction downtime.</p>
             </div>
-            <div class="achievement-card">
-                <div class="achievement-number">$2M+</div>
-                <div class="achievement-title">Transactions Processed</div>
-                <div class="achievement-desc">99.99% uptime maintained</div>
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">🔄</div>
+                <p class="achievement-desc"><strong style="color: #00B4D8;">40% Maintenance Overhead Reduction</strong><br>Migrated MOEI UAE core services from VB.NET to ASP.NET Core 8, cutting deployment time from 2 days to 4 hours.</p>
             </div>
-            <div class="achievement-card">
-                <div class="achievement-number">20+</div>
-                <div class="achievement-title">Developers Mentored</div>
-                <div class="achievement-desc">Building next-gen talent</div>
-            </div>
-        </div>
-
-        <div style="margin-top: 3rem;">
-            <div class="about-grid">
-                <div class="about-card">
-                    <h3><i class="fas fa-rocket"></i> Expertise</h3>
-                    <p>Specialized in architecting microservices, implementing payment gateway integrations, and leveraging Azure cloud services for optimal performance and reliability.</p>
-                </div>
-                <div class="about-card">
-                    <h3><i class="fas fa-code"></i> Development</h3>
-                    <p>Passionate about clean code, design patterns, and agile methodologies with proven ability to lead cross-functional teams and drive technical excellence.</p>
-                </div>
-                <div class="about-card">
-                    <h3><i class="fas fa-globe"></i> Availability</h3>
-                    <p>Currently open to exciting opportunities in GCC and Europe as an immediate joiner with flexible arrangements.</p>
-                </div>
+            <div class="achievement-card fade-in">
+                <div class="achievement-icon">🚀</div>
+                <p class="achievement-desc"><strong style="color: #00B4D8;">35% API Performance Gain</strong><br>Improved API response times at NexGen Technologies through systematic bottleneck analysis and .NET + SQL Server optimizations.</p>
             </div>
         </div>
     </section>
@@ -786,85 +739,99 @@
     <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title gradient-text">Technical Skills</h2>
-        <p class="section-subtitle">Expertise across modern technology stack</p>
+        <p class="section-subtitle">Comprehensive Modern Technology Stack</p>
         
         <div class="skills-container">
             <div class="skill-category">
                 <h3><i class="fas fa-cube"></i> Backend & .NET</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">.NET Core 6+</span>
-                    <span class="skill-tag">ASP.NET Core</span>
                     <span class="skill-tag">C#</span>
-                    <span class="skill-tag">Entity Framework Core</span>
+                    <span class="skill-tag">.NET 6/7/8/9</span>
+                    <span class="skill-tag">ASP.NET Core</span>
+                    <span class="skill-tag">Entity Framework Core 8</span>
+                    <span class="skill-tag">LINQ</span>
                     <span class="skill-tag">Microservices</span>
-                    <span class="skill-tag">RESTful APIs</span>
-                    <span class="skill-tag">gRPC</span>
-                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">Clean Architecture</span>
+                    <span class="skill-tag">CQRS</span>
+                    <span class="skill-tag">MediatR</span>
+                    <span class="skill-tag">SignalR</span>
+                    <span class="skill-tag">Blazor</span>
+                    <span class="skill-tag">ADO.NET</span>
+                    <span class="skill-tag">SOLID Principles</span>
                 </div>
             </div>
 
             <div class="skill-category">
                 <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Azure</span>
-                    <span class="skill-tag">App Services</span>
-                    <span class="skill-tag">Azure SQL</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Kubernetes</span>
-                    <span class="skill-tag">CI/CD Pipelines</span>
-                    <span class="skill-tag">GitHub Actions</span>
+                    <span class="skill-tag">Microsoft Azure</span>
+                    <span class="skill-tag">App Service</span>
+                    <span class="skill-tag">Service Bus</span>
+                    <span class="skill-tag">Azure Functions</span>
+                    <span class="skill-tag">Blob Storage</span>
                     <span class="skill-tag">Azure DevOps</span>
+                    <span class="skill-tag">CI/CD Pipelines</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Bitbucket</span>
+                    <span class="skill-tag">Agile/Scrum</span>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3><i class="fas fa-database"></i> Databases & Integrations</h3>
+                <h3><i class="fas fa-database"></i> Data & APIs</h3>
                 <div class="skill-tags">
                     <span class="skill-tag">SQL Server</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">T-SQL</span>
+                    <span class="skill-tag">Query Optimization</span>
+                    <span class="skill-tag">Indexing</span>
+                    <span class="skill-tag">Oracle</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">SOAP/WCF</span>
+                    <span class="skill-tag">gRPC</span>
                     <span class="skill-tag">Redis</span>
-                    <span class="skill-tag">RabbitMQ</span>
-                    <span class="skill-tag">Message Queues</span>
-                    <span class="skill-tag">Elasticsearch</span>
-                    <span class="skill-tag">API Integration</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">SSRS</span>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3><i class="fas fa-credit-card"></i> Payment Gateways</h3>
+                <h3><i class="fas fa-credit-card"></i> Payment & Integration</h3>
                 <div class="skill-tags">
                     <span class="skill-tag">Stripe</span>
                     <span class="skill-tag">Ngenius</span>
                     <span class="skill-tag">UAE Pay</span>
                     <span class="skill-tag">Naqodi</span>
-                    <span class="skill-tag">PayPal</span>
-                    <span class="skill-tag">PCI Compliance</span>
+                    <span class="skill-tag">SendGrid</span>
+                    <span class="skill-tag">Emirates ID API</span>
+                    <span class="skill-tag">Facial Recognition</span>
+                    <span class="skill-tag">PCI-DSS Compliance</span>
                     <span class="skill-tag">Payment Security</span>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3><i class="fas fa-cogs"></i> Architecture & Patterns</h3>
+                <h3><i class="fas fa-code"></i> Frontend (Supporting)</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">SOLID Principles</span>
-                    <span class="skill-tag">Design Patterns</span>
-                    <span class="skill-tag">Clean Architecture</span>
-                    <span class="skill-tag">DDD</span>
-                    <span class="skill-tag">CQRS</span>
-                    <span class="skill-tag">Event Sourcing</span>
+                    <span class="skill-tag">Angular 14+</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">Bootstrap 5</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">jQuery</span>
+                    <span class="skill-tag">AJAX</span>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h3><i class="fas fa-project-diagram"></i> Methodologies</h3>
+                <h3><i class="fas fa-tools"></i> Testing & Tools</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Agile</span>
-                    <span class="skill-tag">Scrum</span>
-                    <span class="skill-tag">Team Leadership</span>
-                    <span class="skill-tag">Mentoring</span>
-                    <span class="skill-tag">Code Review</span>
-                    <span class="skill-tag">Technical Documentation</span>
+                    <span class="skill-tag">Postman</span>
+                    <span class="skill-tag">Unit Testing</span>
+                    <span class="skill-tag">Swagger/OpenAPI</span>
+                    <span class="skill-tag">Visual Studio</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">JIRA</span>
                 </div>
             </div>
         </div>
@@ -873,115 +840,126 @@
     <!-- Experience Section -->
     <section id="experience">
         <h2 class="section-title gradient-text">Professional Experience</h2>
-        <p class="section-subtitle">10+ years of expertise in enterprise development</p>
+        <p class="section-subtitle">5+ Years Across Government, Banking & FinTech</p>
         
-        <div class="experience-timeline">
-            <div class="experience-item fade-in">
-                <div class="experience-header">
-                    <div>
-                        <div class="experience-title">Senior .NET Developer</div>
-                        <div class="experience-company">Leading Tech Fintech Solutions, UAE</div>
-                    </div>
-                    <div class="experience-date">2021 - Present</div>
+        <div class="experience-item fade-in">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Senior .NET Developer</div>
+                    <div class="experience-company">Smart Works for Information Systems | Abu Dhabi, UAE</div>
                 </div>
-                <ul class="experience-description">
-                    <li>Architected and developed microservices-based payment processing platform handling $2M+ monthly transactions with 99.99% uptime</li>
-                    <li>Integrated multiple payment gateways (Stripe, Ngenius, UAE Pay, Naqodi) with PCI DSS compliance implementation</li>
-                    <li>Led cross-functional team of 8 developers, established coding standards, and mentored junior developers</li>
-                    <li>Optimized critical APIs achieving 40% performance improvement through caching strategies and database optimization</li>
-                </ul>
+                <div class="experience-date">May 2025 – Present</div>
             </div>
+            <ul class="experience-description">
+                <li>Integrated 4 payment gateways (Ngenius, UAE Pay, Stripe, Naqodi) into SZF government event ticket sales platform with PCI-DSS compliance and zero transaction downtime.</li>
+                <li>Modernized MOEI UAE legacy VB.NET system to ASP.NET Core 8 APIs, reducing maintenance overhead by 40% and deployment cycles from 2 days to 4 hours.</li>
+                <li>Architected dynamic ASP.NET Core middleware layer with DB-driven stored procedure routing enabling zero-code deployments and ~60% reduction in integration onboarding time.</li>
+                <li>Developed full-stack Sports Lottery System supporting registration, vote tallying, winner announcements, and prize distribution for thousands of concurrent users.</li>
+                <li>Integrated SendGrid for automated transactional emails across payment, onboarding, and compliance workflows, reducing manual notification effort by 80%.</li>
+            </ul>
+        </div>
 
-            <div class="experience-item fade-in">
-                <div class="experience-header">
-                    <div>
-                        <div class="experience-title">.NET Developer</div>
-                        <div class="experience-company">Digital Commerce Solutions Pvt. Ltd., Pakistan</div>
-                    </div>
-                    <div class="experience-date">2019 - 2021</div>
+        <div class="experience-item fade-in">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">.NET Developer</div>
+                    <div class="experience-company">HNW Research & Management Consultancy | Abu Dhabi, UAE</div>
                 </div>
-                <ul class="experience-description">
-                    <li>Developed and maintained e-commerce platform serving 100K+ daily active users using ASP.NET Core</li>
-                    <li>Implemented RESTful APIs and real-time notification system using SignalR and message queues</li>
-                    <li>Containerized applications using Docker and orchestrated with Kubernetes on Azure infrastructure</li>
-                    <li>Established CI/CD pipelines using Azure DevOps reducing deployment time from hours to minutes</li>
-                </ul>
+                <div class="experience-date">Oct 2024 – May 2025</div>
             </div>
+            <ul class="experience-description">
+                <li>Built digital CX Hub for managing improvement projects across multiple Abu Dhabi government entities, onboarding 10+ public sector clients onto unified platform.</li>
+                <li>Developed dynamic KPI tracking dashboards and Gantt chart visualizations using ASP.NET Core APIs + Angular for real-time project monitoring.</li>
+                <li>Engineered multi-step automated approval workflows and digital services catalogue, reducing manual approval cycles from days to hours.</li>
+            </ul>
+        </div>
 
-            <div class="experience-item fade-in">
-                <div class="experience-header">
-                    <div>
-                        <div class="experience-title">Junior .NET Developer</div>
-                        <div class="experience-company">Enterprise Software Solutions Inc., Pakistan</div>
-                    </div>
-                    <div class="experience-date">2017 - 2019</div>
+        <div class="experience-item fade-in">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">.NET Developer</div>
+                    <div class="experience-company">NexGen Technologies LLC | Dubai, UAE</div>
                 </div>
-                <ul class="experience-description">
-                    <li>Developed enterprise applications using ASP.NET MVC and ASP.NET Core frameworks</li>
-                    <li>Collaborated with business analysts and stakeholders to translate requirements into technical solutions</li>
-                    <li>Participated in code reviews, bug fixes, and contributed to knowledge sharing sessions</li>
-                </ul>
+                <div class="experience-date">May 2024 – Sep 2024</div>
             </div>
+            <ul class="experience-description">
+                <li>Diagnosed and resolved 5+ critical bottlenecks in Time & Attendance System achieving 35% API response time reduction and improved SLA compliance across 3 enterprise clients.</li>
+                <li>Developed and integrated Emirates ID card reader service into Visitor Management System, enhancing security and eliminating manual data entry errors.</li>
+                <li>Implemented QR-code badge printing module for gate access management, streamlining visitor processing by ~50% during peak check-in periods.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item fade-in">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Mid-Level Software Engineer</div>
+                    <div class="experience-company">HBL Innovation Center | Karachi, Pakistan</div>
+                </div>
+                <div class="experience-date">Oct 2022 – Oct 2023</div>
+            </div>
+            <ul class="experience-description">
+                <li>Re-engineered blacklist verification service using optimized SQL Server indexing and async .NET, reducing execution time from 4+ hours to under 10 minutes (97% improvement).</li>
+                <li>Led backend development of HBL TAP & PAY mPOS app (.NET Core, SQL Server), replacing legacy PaySky system for 1,000+ IPG merchants.</li>
+                <li>Built P2M (Person-to-Merchant) payment flow with QR code generation compliant with State Bank of Pakistan (SBP) standards.</li>
+                <li>Delivered standardized digital onboarding across POS, QR, Direct Transfer, IPG, Konnect Agent, and Level-2 Account Opening services.</li>
+                <li>Integrated third-party facial recognition APIs for biometric user authentication, improving KYC compliance.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item fade-in">
+            <div class="experience-header">
+                <div>
+                    <div class="experience-title">Software Engineer (.NET)</div>
+                    <div class="experience-company">KCompute (Pvt) Ltd | Karachi, Pakistan</div>
+                </div>
+                <div class="experience-date">Sep 2021 – Sep 2022</div>
+            </div>
+            <ul class="experience-description">
+                <li>Delivered 5–10 JIRA tickets per day for GoldenCare insurance brokerage products covering Long-Term Care and Medicare solutions.</li>
+                <li>Enhanced SurView.AE platform performance through code optimization and introduced automated feedback email system reducing client complaint response time by 40%.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- Education & Certifications -->
     <section id="education">
         <h2 class="section-title gradient-text">Education & Certifications</h2>
-        <p class="section-subtitle">Continuous learning and professional development</p>
+        <p class="section-subtitle">Continuous Professional Development</p>
         
         <div class="education-grid">
             <div class="education-card fade-in">
-                <div class="education-degree">BS in Software Engineering</div>
-                <div class="education-school">FAST - NUCES, Pakistan</div>
+                <div class="education-degree">Bachelor of Computer Science</div>
+                <div class="education-school">University of Sindh, Jamshoro</div>
                 <div class="education-details">
-                    2012 - 2016<br>
-                    CGPA: 3.7/4.0 | Graduated with Distinction
+                    Completed: Dec 2021<br>
+                    Focus on Software Engineering & System Design
                 </div>
             </div>
 
             <div class="education-card fade-in">
-                <div class="education-degree">Azure Solutions Architect Expert</div>
+                <div class="education-degree">Microsoft Azure Fundamentals (AZ-900)</div>
                 <div class="education-school">Microsoft Certified</div>
                 <div class="education-details">
-                    2023<br>
-                    Credential ID: Available upon request
+                    In Progress — Planned 2025<br>
+                    Cloud Fundamentals Certification
                 </div>
             </div>
 
             <div class="education-card fade-in">
-                <div class="education-degree">Azure Developer Associate</div>
+                <div class="education-degree">Azure Developer Associate (AZ-204)</div>
                 <div class="education-school">Microsoft Certified</div>
                 <div class="education-details">
-                    2022<br>
-                    Credential ID: Available upon request
+                    In Progress — Planned 2025<br>
+                    Cloud Development Expertise
                 </div>
             </div>
 
             <div class="education-card fade-in">
-                <div class="education-degree">Certified Kubernetes Application Developer (CKAD)</div>
-                <div class="education-school">CNCF</div>
+                <div class="education-degree">Continuous Learning</div>
+                <div class="education-school">Self-Directed Development</div>
                 <div class="education-details">
-                    2023<br>
-                    Container orchestration expertise
-                </div>
-            </div>
-
-            <div class="education-card fade-in">
-                <div class="education-degree">AWS Certified Solutions Architect - Associate</div>
-                <div class="education-school">Amazon AWS</div>
-                <div class="education-details">
-                    2021<br>
-                    Cloud infrastructure expertise
-                </div>
-            </div>
-
-            <div class="education-card fade-in">
-                <div class="education-degree">Payment Systems & Security</div>
-                <div class="education-school">Multiple Industry Certifications</div>
-                <div class="education-details">
-                    2020-2024<br>
-                    PCI DSS, Payment Integration Best Practices
+                    Upskilling in:<br>
+                    Docker, Clean Architecture, CQRS, .NET 9
                 </div>
             </div>
         </div>
@@ -992,24 +970,25 @@
         <div class="cta-section">
             <div class="cta-content">
                 <h2 class="cta-title gradient-text">Let's Build Something Amazing</h2>
-                <p class="cta-text">Open to exciting opportunities in GCC and Europe. Let's connect and create transformative solutions together.</p>
+                <p class="cta-text">Seeking Senior .NET Developer opportunities in GCC and Europe. Let's collaborate and create transformative enterprise solutions.</p>
                 
                 <div class="hero-buttons">
                     <a href="mailto:faizmuhammadmarri@gmail.com" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Send Email
+                        <i class="fas fa-envelope"></i> Email: faizmuhammadmarri@gmail.com
                     </a>
                     <a href="https://linkedin.com/in/faiz-mari" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                        <i class="fab fa-linkedin-in"></i> LinkedIn Profile
                     </a>
                     <a href="https://github.com/Fai-M-Mari" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-github"></i> GitHub
+                        <i class="fab fa-github"></i> GitHub Projects
                     </a>
                 </div>
 
                 <div style="margin-top: 2rem; color: #a0a0a0; font-size: 0.95rem;">
-                    <p>📧 <a href="mailto:faizmuhammadmarri@gmail.com" style="color: #00B4D8; text-decoration: none;">faizmuhammadmarri@gmail.com</a></p>
-                    <p>📱 <a href="tel:+923032213801" style="color: #00B4D8; text-decoration: none;">+92 303 2213801</a></p>
-                    <p>📍 Abu Dhabi, UAE</p>
+                    <p style="margin-bottom: 0.5rem;">📧 <a href="mailto:faizmuhammadmarri@gmail.com" style="color: #00B4D8; text-decoration: none;">faizmuhammadmarri@gmail.com</a></p>
+                    <p style="margin-bottom: 0.5rem;">📱 <a href="tel:+923032213801" style="color: #00B4D8; text-decoration: none;">+92 303 2213801</a></p>
+                    <p style="margin-bottom: 0.5rem;">📍 Karachi, Pakistan (UAE-Based)</p>
+                    <p style="color: #7a7a7a; font-size: 0.85rem;">Open for immediate relocation to GCC and Europe</p>
                 </div>
             </div>
         </div>
@@ -1020,13 +999,14 @@
         <div class="footer-content">
             <div class="footer-links">
                 <a href="#about">About</a>
+                <a href="#achievements">Achievements</a>
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#education">Education</a>
                 <a href="#contact">Contact</a>
             </div>
-            <p>© 2024 Faiz Muhammad. All rights reserved.</p>
-            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Designed & Built with <i class="fas fa-heart" style="color: #512BD4;"></i> for Excellence</p>
+            <p>© 2025 Faiz Muhammad. All rights reserved.</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Senior .NET Developer | ASP.NET Core | Microservices | Azure | Payment Integrations</p>
         </div>
     </footer>
 
@@ -1075,7 +1055,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in, .experience-item, .education-card').forEach(el => {
+        document.querySelectorAll('.fade-in, .achievement-card, .education-card, .experience-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
