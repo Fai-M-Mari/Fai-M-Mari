@@ -7,7 +7,7 @@
 - **Currently**: Senior .NET Developer at Smart Works for Information Systems (Abu Dhabi)
 - **Open to**: GCC / Europe opportunities (Immediate joiner)
 - **Email**: faizmuhammadmarri@gmail.com | **Phone**: +92 303 2213801
-- **LinkedIn**: [linkedin.com/in/faiz-mari](https://linkedin.com/in/faiz-mari) | **CV**: [Download](https://github.com/Fai-M-Mari/Fai-M-Mari/blob/main/docs/Faiz%20Muhammad%20Net%20Developer%2028-07-2026.docx)
+- **LinkedIn**: [linkedin.com/in/faiz-mari](https://linkedin.com/in/faiz-mari) | **CV**: [Download](https://github.com/Fai-M-Mari/Fai-M-Mari/raw/main/docs/Faiz%20Muhammad%20Net%20Developer%2028-07-2026.docx)
 
 ---
 
