@@ -1,1053 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faiz Muhammad | Senior .NET Developer | Portfolio</title>
-    <meta name="description" content="Senior .NET Developer with 5+ years of expertise in ASP.NET Core, Clean Architecture, Payment Systems, and Government Digital Transformation. UAE-based candidate open to GCC relocation.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #512BD4;
-            --secondary: #0078D4;
-            --accent: #00B4D8;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
-            color: #e0e0e0;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-        }
-
-        .glass-light {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
-        /* Gradients */
-        .gradient-text {
-            background: linear-gradient(135deg, #512BD4 0%, #0078D4 50%, #00B4D8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, #512BD4 0%, #0078D4 100%);
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(15, 15, 30, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .nav-links {
-            display: none;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links.active {
-            display: flex;
-        }
-
-        .nav-links a {
-            color: #e0e0e0;
-            text-decoration: none;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #512BD4, #0078D4);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #00B4D8;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        @media (min-width: 768px) {
-            .nav-links {
-                display: flex !important;
-            }
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            margin-top: 70px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(81, 43, 212, 0.2) 0%, transparent 70%);
-            top: 10%;
-            left: -200px;
-            animation: float 20s infinite ease-in-out;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(0, 120, 212, 0.2) 0%, transparent 70%);
-            bottom: 10%;
-            right: -150px;
-            animation: float 25s infinite ease-in-out reverse;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(30px); }
-        }
-
-        .hero-content {
-            max-width: 900px;
-            z-index: 10;
-            text-align: center;
-        }
-
-        .hero-content h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-        }
-
-        .hero-content .subtitle {
-            font-size: clamp(1.2rem, 4vw, 2rem);
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #512BD4, #00B4D8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-content .tagline {
-            font-size: 1.1rem;
-            color: #a0a0a0;
-            margin-bottom: 2rem;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            border: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #512BD4, #0078D4);
-            color: white;
-            box-shadow: 0 8px 32px rgba(81, 43, 212, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 48px rgba(81, 43, 212, 0.4);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 2px solid rgba(81, 43, 212, 0.5);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(81, 43, 212, 0.2);
-            border-color: #512BD4;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(81, 43, 212, 0.3);
-            color: #00B4D8;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .social-icon:hover {
-            background: rgba(81, 43, 212, 0.2);
-            border-color: #00B4D8;
-            transform: translateY(-5px);
-        }
-
-        /* Section */
-        section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 6rem 2rem;
-            scroll-margin-top: 80px;
-        }
-
-        .section-title {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #a0a0a0;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
-
-        /* About Section */
-        .about-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            margin-bottom: 2rem;
-        }
-
-        .about-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        /* Achievement Cards */
-        .achievement-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .achievement-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border-left: 4px solid #512BD4;
-        }
-
-        .achievement-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(81, 43, 212, 0.1), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .achievement-card:hover::before {
-            opacity: 1;
-        }
-
-        .achievement-icon {
-            font-size: 2rem;
-            color: #00B4D8;
-            margin-bottom: 1rem;
-        }
-
-        .achievement-desc {
-            font-size: 0.95rem;
-            color: #c0c0c0;
-            line-height: 1.6;
-        }
-
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .skill-category h3 {
-            color: #00B4D8;
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .skill-tag {
-            display: inline-block;
-            padding: 0.6rem 1.2rem;
-            background: rgba(81, 43, 212, 0.2);
-            border: 1px solid rgba(81, 43, 212, 0.5);
-            border-radius: 50px;
-            color: #00B4D8;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-            cursor: default;
-        }
-
-        .skill-tag:hover {
-            background: rgba(81, 43, 212, 0.4);
-            border-color: #00B4D8;
-            transform: translateY(-2px);
-        }
-
-        /* Experience Section */
-        .experience-item {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            border-left: 4px solid #512BD4;
-            transition: all 0.3s ease;
-        }
-
-        .experience-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-left-color: #00B4D8;
-            transform: translateX(10px);
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .experience-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #ffffff;
-        }
-
-        .experience-date {
-            color: #00B4D8;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .experience-company {
-            color: #a0a0a0;
-            margin-bottom: 1rem;
-        }
-
-        .experience-description {
-            list-style: none;
-        }
-
-        .experience-description li {
-            color: #c0c0c0;
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .experience-description li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #512BD4;
-        }
-
-        /* Education Section */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .education-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            border-radius: 15px;
-            border-top: 3px solid #512BD4;
-        }
-
-        .education-degree {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-school {
-            color: #00B4D8;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .education-details {
-            color: #a0a0a0;
-            font-size: 0.95rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            padding: 4rem 2rem;
-            border-radius: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(81, 43, 212, 0.3), transparent);
-            top: -150px;
-            right: -150px;
-            animation: float 20s infinite;
-        }
-
-        .cta-section::after {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(0, 120, 212, 0.3), transparent);
-            bottom: -150px;
-            left: -150px;
-            animation: float 25s infinite reverse;
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 10;
-        }
-
-        .cta-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .cta-text {
-            color: #c0c0c0;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        /* Footer */
-        footer {
-            background: rgba(15, 15, 30, 0.8);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 3rem 2rem;
-            text-align: center;
-            color: #a0a0a0;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #c0c0c0;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #00B4D8;
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: #e0e0e0;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .cta-title {
-                font-size: 1.8rem;
-            }
-
-            .experience-header {
-                flex-direction: column;
-            }
-        }
-
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 0.6s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Smooth Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #512BD4, #0078D4);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(135deg, #612BF4, #1088F4);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faiz Muhammad | Senior Backend Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05050a;--surface:rgba(255,255,255,0.03);--cyan:#00f0ff;--purple:#a855f7;--text:#e2e8f0;--muted:#94a3b8;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+.glow{position:fixed;width:500px;height:500px;border-radius:50%;filter:blur(120px);opacity:.15;pointer-events:none;z-index:0}
+.glow-1{background:var(--cyan);top:-10%;left:-10%;animation:drift 20s infinite alternate}
+.glow-2{background:var(--purple);bottom:-10%;right:-10%;animation:drift 25s infinite alternate-reverse}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(50px,80px)}}
+.container{max-width:1100px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1}
+.glass{background:var(--surface);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.06);border-radius:20px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 1rem 4rem}
+.hero-name{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-2px}
+.hero-role{font-size:1.3rem;color:var(--muted);margin-top:.8rem;font-weight:300}
+.hero-contact{display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;margin-top:2rem;font-family:'JetBrains Mono',monospace;font-size:.85rem}
+.hero-contact a{color:var(--cyan);text-decoration:none;opacity:.8;transition:.3s}
+.hero-contact a:hover{opacity:1;text-shadow:0 0 10px var(--cyan)}
+.section{padding:5rem 0}
+.section-head{display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem}
+.section-head h2{font-size:2rem;font-weight:600;letter-spacing:-1px}
+.section-head .line{flex:1;height:1px;background:linear-gradient(90deg,var(--cyan),transparent)}
+.summary-box{padding:2rem;font-size:1.05rem;line-height:1.8;color:var(--muted)}
+.comp-grid{display:flex;flex-wrap:wrap;gap:.7rem}
+.comp-pill{padding:.55rem 1.2rem;border-radius:50px;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.2);color:var(--cyan);font-size:.85rem;font-weight:500;transition:.3s;cursor:default}
+.comp-pill:hover{background:rgba(0,240,255,0.15);box-shadow:0 0 20px rgba(0,240,255,0.1);transform:translateY(-2px)}
+.skills-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
+.skill-card{padding:1.5rem}
+.skill-card h4{font-family:'JetBrains Mono',monospace;font-size:.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--purple);margin-bottom:.8rem}
+.skill-card p{color:var(--muted);font-size:.9rem;line-height:1.7}
+.exp-card{padding:2rem;margin-bottom:1.5rem;transition:.3s;position:relative;overflow:hidden}
+.exp-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--cyan),var(--purple));opacity:0;transition:.3s}
+.exp-card:hover::before{opacity:1}
+.exp-card:hover{transform:translateX(6px);background:rgba(255,255,255,0.05)}
+.exp-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.exp-role{font-size:1.15rem;font-weight:600}
+.exp-co{color:var(--muted);font-size:.95rem}
+.exp-date{font-family:'JetBrains Mono',monospace;color:var(--purple);font-size:.85rem}
+.exp-card ul{list-style:none;margin-left:0;color:var(--muted);font-size:.92rem}
+.exp-card li{padding-left:1.2rem;position:relative;margin-bottom:.6rem;line-height:1.6}
+.exp-card li::before{content:'›';position:absolute;left:0;color:var(--cyan);font-size:1.2rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem}
+.stat-card{text-align:center;padding:1.8rem 1rem}
+.stat-num{font-size:2.2rem;font-weight:700;background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-label{font-size:.8rem;color:var(--muted);margin-top:.4rem;text-transform:uppercase;letter-spacing:1px}
+.edu-cert{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.edu-box{padding:1.5rem}
+.edu-box h4{color:var(--text);margin-bottom:.3rem;font-size:1.05rem}
+.edu-box p{color:var(--muted);font-size:.9rem;line-height:1.6}
+footer{text-align:center;padding:4rem 1rem;color:var(--muted);font-size:.85rem}
+@media(max-width:640px){.edu-cert{grid-template-columns:1fr}.hero-contact{flex-direction:column;gap:.6rem}}
+</style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo gradient-text">
-                <i class="fas fa-code"></i> Faiz Muhammad
-            </div>
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content fade-in">
-            <h1>Faiz Muhammad</h1>
-            <p class="subtitle">Senior .NET Developer</p>
-            <p class="tagline">ASP.NET Core · Clean Architecture · Payment Systems · Government Digital Transformation</p>
-            <p class="tagline" style="color: #7a7a7a; margin-bottom: 2rem;">5+ Years Enterprise Development | Karachi, Pakistan (Open to GCC Relocation)</p>
-            
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i> Get in Touch
-                </a>
-                <a href="https://github.com/Fai-M-Mari/Fai-M-Mari/raw/main/docs/Faiz%20Muhammad%20.Net%206-2026.pdf" class="btn btn-secondary" target="_blank">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
-            </div>
+<div class="container">
+<section class="hero">
+  <div>
+    <div class="hero-name">Faiz Muhammad</div>
+    <div class="hero-role">Senior Backend Engineer (.NET) | Enterprise SaaS | Banking | FinTech</div>
+    <div class="hero-contact">
+      <a href="mailto:faizmuhammadmarri@gmail.com">faizmuhammadmarri@gmail.com</a>
+      <span style="color:var(--muted)">+92-303-2213801</span>
+      <a href="https://linkedin.com/in/faiz-mari" target="_blank">linkedin.com/in/faiz-mari</a>
+      <span style="color:var(--muted)">Karachi, Pakistan (Open to GCC, Europe & SG)</span>
+    </div>
+  </div>
+</section>
 
-            <div class="social-links">
-                <a href="https://linkedin.com/in/faiz-mari" target="_blank" class="social-icon" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/Fai-M-Mari" target="_blank" class="social-icon" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:faizmuhammadmarri@gmail.com" class="social-icon" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
+<section class="section">
+  <div class="section-head"><h2>About</h2><div class="line"></div></div>
+  <div class="glass summary-box">
+    Senior .NET Developer with 5+ years of experience designing, developing, and modernizing enterprise-grade backend applications across Enterprise SaaS, Banking, FinTech, Digital Payments, and UAE Government Digital Transformation projects. Proven expertise in architecting scalable ASP.NET Core applications, integrating enterprise payment gateways, optimizing high-volume transaction processing, and delivering measurable business outcomes including 96% performance improvement, 40% maintenance reduction, and 35% API performance gains. Strong background in Clean Architecture, Domain-Driven Design (DDD), CQRS, Multi-Tenant SaaS Architecture, REST API development, and secure enterprise integrations. Experienced collaborating with cross-functional teams to deliver scalable, secure, and high-performance business-critical platforms. Currently expanding cloud-native expertise across Microsoft Azure, Docker, Kubernetes, and modern DevOps practices.
+  </div>
+</section>
 
-            <p style="color: #a0a0a0; margin-top: 3rem; font-size: 0.9rem;">
-                📍 Karachi, Pakistan | Open to GCC Relocation
-            </p>
-        </div>
-    </section>
+<section class="section">
+  <div class="section-head"><h2>Core Competencies</h2><div class="line"></div></div>
+  <div class="comp-grid">
+    <span class="comp-pill">Enterprise SaaS Development</span>
+    <span class="comp-pill">Banking Systems</span>
+    <span class="comp-pill">FinTech Solutions</span>
+    <span class="comp-pill">Digital Payments</span>
+    <span class="comp-pill">Backend Engineering</span>
+    <span class="comp-pill">Clean Architecture</span>
+    <span class="comp-pill">Domain-Driven Design</span>
+    <span class="comp-pill">CQRS</span>
+    <span class="comp-pill">Multi-Tenant Architecture</span>
+    <span class="comp-pill">REST API Development</span>
+    <span class="comp-pill">Enterprise Integration</span>
+    <span class="comp-pill">Performance Optimization</span>
+    <span class="comp-pill">Secure API Development</span>
+    <span class="comp-pill">Cloud-Ready Applications</span>
+  </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title gradient-text">Professional Summary</h2>
-        <p class="section-subtitle">5+ Years of Enterprise .NET Development Excellence</p>
-        
-        <div class="about-card">
-            <p style="color: #c0c0c0; line-height: 1.8;">
-                Senior .NET Developer with 5+ years of full-stack experience designing and delivering enterprise-grade ASP.NET Core applications across FinTech, banking, and UAE government sectors. 
-                <br><br>
-                Proven track record integrating complex payment systems (Ngenius, UAE Pay, Stripe, Naqodi) and modernising legacy platforms for UAE Ministry of Energy & Infrastructure. Reduced a critical banking service processing time by <strong style="color: #00B4D8;">96% (4 hours → 10 minutes)</strong> at HBL.
-                <br><br>
-                Experienced in <strong style="color: #00B4D8;">Clean Architecture, CQRS, Repository Pattern, JWT/OAuth 2.0, Redis, SignalR, Hangfire, and CI/CD pipelines</strong> with Azure DevOps. Currently expanding expertise in Azure cloud services, MediatR, Docker, and Kubernetes.
-                <br><br>
-                <strong style="color: #00B4D8;">Immediate availability — Open to GCC relocation and European opportunities.</strong>
-            </p>
-        </div>
-    </section>
+<section class="section">
+  <div class="section-head"><h2>Technical Stack</h2><div class="line"></div></div>
+  <div class="skills-wrap">
+    <div class="glass skill-card"><h4>Languages & Frameworks</h4><p>C#, .NET 8/.NET 9, ASP.NET Core MVC, ASP.NET Core Web API, Entity Framework Core, LINQ, ADO.NET</p></div>
+    <div class="glass skill-card"><h4>Architecture & Patterns</h4><p>Clean Architecture, Domain-Driven Design (DDD), CQRS, MediatR, SOLID Principles, Repository Pattern, Unit of Work, Dependency Injection, Microservices, Multi-Tenant SaaS Architecture, RESTful API Design</p></div>
+    <div class="glass skill-card"><h4>Authentication & Security</h4><p>JWT Authentication, ASP.NET Core Identity, OAuth 2.0, Role-Based Access Control (RBAC), Secure API Design</p></div>
+    <div class="glass skill-card"><h4>Cloud & DevOps</h4><p>Microsoft Azure (App Service, Azure Functions, Azure DevOps), Docker, Kubernetes, CI/CD Pipelines, Git, Bitbucket</p></div>
+    <div class="glass skill-card"><h4>Databases & Caching</h4><p>SQL Server, Oracle Database, T-SQL, Entity Framework Core Migrations, Stored Procedures, Query Optimization, Redis (Distributed Caching)</p></div>
+    <div class="glass skill-card"><h4>Messaging & Background</h4><p>Hangfire, SignalR, RabbitMQ, SendGrid, Background Services, Serilog</p></div>
+    <div class="glass skill-card"><h4>Payment & FinTech</h4><p>Payment Gateway Integration (Ngenius, UAE Pay, Stripe, Naqodi), Digital Payments, Payment Processing, Merchant Onboarding, Banking APIs, KYC/AML Integration</p></div>
+    <div class="glass skill-card"><h4>API & Integration</h4><p>REST APIs, Third-Party API Integration, Swagger/OpenAPI, Postman, JSON, Webhooks</p></div>
+    <div class="glass skill-card"><h4>Frontend Technologies</h4><p>Angular, Blazor, HTML5, CSS3, Bootstrap, JavaScript, TypeScript, jQuery</p></div>
+    <div class="glass skill-card"><h4>Testing & Tools</h4><p>xUnit, NUnit, Unit Testing, JIRA, Agile/Scrum, SSRS, SSIS</p></div>
+  </div>
+</section>
 
-    <!-- Key Achievements Section -->
-    <section id="achievements">
-        <h2 class="section-title gradient-text">Key Achievements</h2>
-        <p class="section-subtitle">Measurable Impact Across Multiple Domains</p>
-        
-        <div class="achievement-grid">
-            <div class="achievement-card fade-in">
-                <div class="achievement-icon">⚡</div>
-                <p class="achievement-desc"><strong style="color: #00B4D8;">96% Performance Improvement</strong><br>Reduced banking blacklist verification from 4+ hours to 10 minutes at HBL Innovation Center</p>
-            </div>
-            <div class="achievement-card fade-in">
-                <div class="achievement-icon">💳</div>
-                <p class="achievement-desc"><strong style="color: #00B4D8;">4 Payment Gateway Integration</strong><br>Ngenius, UAE Pay, Stripe, Naqodi integration for SZF (Sharjah National Events) - PCI-compliant</p>
-            </div>
-            <div class="achievement-card fade-in">
-                <div class="achievement-icon">🔄</div>
-                <p class="achievement-desc"><strong style="color: #00B4D8;">40% Maintenance Reduction</strong><br>Migrated MOEI UAE legacy services from VB.NET to ASP.NET Core 8, cutting overhead significantly</p>
-            </div>
-            <div class="achievement-card fade-in">
-                <div class="achievement-icon">🚀</div>
-                <p class="achievement-desc"><strong style="color: #00B4D8;">35% API Performance Gain</strong><br>Optimized Time & Attendance, HRMS, and Visitor Management systems across 500+ daily users</p>
-            </div>
-        </div>
-    </section>
+<section class="section">
+  <div class="section-head"><h2>Experience</h2><div class="line"></div></div>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title gradient-text">Technical Skills</h2>
-        <p class="section-subtitle">Comprehensive Modern Technology Stack</p>
-        
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3><i class="fas fa-cube"></i> Backend & .NET</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">.NET Core 3.1–9</span>
-                    <span class="skill-tag">ASP.NET Core MVC</span>
-                    <span class="skill-tag">Web API</span>
-                    <span class="skill-tag">Entity Framework Core</span>
-                    <span class="skill-tag">LINQ</span>
-                    <span class="skill-tag">ADO.NET</span>
-                    <span class="skill-tag">Microservices</span>
-                    <span class="skill-tag">SignalR</span>
-                    <span class="skill-tag">Hangfire</span>
-                    <span class="skill-tag">Blazor</span>
-                </div>
-            </div>
+  <div class="glass exp-card">
+    <div class="exp-top">
+      <div><div class="exp-role">Senior .NET Developer — Payment Integrations & Legacy Modernization</div><div class="exp-co">Smart Works for Information | Abu Dhabi, UAE</div></div>
+      <div class="exp-date">May 2025 — May 2026</div>
+    </div>
+    <ul>
+      <li>Integrated four enterprise payment gateways (Ngenius, UAE Pay, Stripe, and Naqodi) into a legacy VB.NET MLS and ticketing platform, enabling secure, PCI-compliant digital payment processing for high-volume public event transactions.</li>
+      <li>Modernized three mission-critical UAE Ministry of Energy & Infrastructure services from legacy .NET to ASP.NET Core 8, reducing maintenance effort by 40% while improving long-term platform stability and maintainability.</li>
+      <li>Architected a configuration-driven ASP.NET Core middleware platform with unified API endpoints capable of dynamically executing stored procedures, enabling scalable JSON-centric integrations without application redeployment.</li>
+      <li>Implemented SendGrid transactional email integration for automated payment confirmations and compliance notifications, reducing manual outreach by an estimated 80%.</li>
+      <li>Developed a Jira-inspired Smart Help Desk System using ASP.NET Core MVC, C#, SQL Server, Entity Framework Core, and SignalR, supporting ticket management, project tracking, sprint workflows, user management, dashboards, and enterprise reporting.</li>
+    </ul>
+  </div>
 
-            <div class="skill-category">
-                <h3><i class="fas fa-building"></i> Architecture & Patterns</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Clean Architecture</span>
-                    <span class="skill-tag">CQRS</span>
-                    <span class="skill-tag">MediatR</span>
-                    <span class="skill-tag">Repository Pattern</span>
-                    <span class="skill-tag">SOLID Principles</span>
-                    <span class="skill-tag">Domain-Driven Design</span>
-                    <span class="skill-tag">RESTful API Design</span>
-                </div>
-            </div>
+  <div class="glass exp-card">
+    <div class="exp-top">
+      <div><div class="exp-role">.NET Developer — Government Digital Transformation & Enterprise Systems</div><div class="exp-co">HNW Research and Management | Abu Dhabi, UAE</div></div>
+      <div class="exp-date">May 2024 — May 2025</div>
+    </div>
+    <ul>
+      <li>Architected and delivered an enterprise Customer Experience Improvement Hub serving 12 Abu Dhabi government entities, supporting 200+ KPIs, configurable workflows, and centralized performance monitoring.</li>
+      <li>Built real-time project progress dashboards with Gantt chart visualisations for government programme managers, improving cross-entity project visibility and decision-making.</li>
+      <li>Designed and implemented a digital services catalogue with role-based access and configurable service templates, streamlining public sector service onboarding.</li>
+      <li>Optimized enterprise APIs across HRMS, Visitor Management, and Time & Attendance systems, reducing response time by 35% for more than 500 daily users through targeted performance tuning.</li>
+      <li>Developed an Emirates ID card reader integration into the visitor management system, cutting check-in processing time and improving gate security compliance.</li>
+      <li>Implemented a QR code badge printing system for visitor management, eliminating manual badge creation and reducing gate access delays.</li>
+    </ul>
+  </div>
 
-            <div class="skill-category">
-                <h3><i class="fas fa-lock"></i> Auth & Security</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">JWT Authentication</span>
-                    <span class="skill-tag">ASP.NET Core Identity</span>
-                    <span class="skill-tag">OAuth 2.0</span>
-                    <span class="skill-tag">Role-Based Access Control</span>
-                    <span class="skill-tag">PCI-DSS Compliance</span>
-                </div>
-            </div>
+  <div class="glass exp-card">
+    <div class="exp-top">
+      <div><div class="exp-role">Mid-Level Software Engineer — Banking & FinTech</div><div class="exp-co">Winklin (Contracted to HBL Bank) | Pakistan</div></div>
+      <div class="exp-date">Oct 2022 — Oct 2023</div>
+    </div>
+    <ul>
+      <li>96% performance improvement: Re-architected merchant blacklist screening using optimized indexing and query strategies, reducing processing time from more than four hours to ten minutes (96% improvement) and restoring merchant onboarding SLAs.</li>
+      <li>Designed and implemented standardised digital onboarding workflows for HBL merchant payment products (QR, IPG), reducing manual onboarding effort by ~60%.</li>
+      <li>Collaborated with cross-functional teams to design and implement standardized merchant onboarding workflows for five HBL digital payment products, reducing manual onboarding effort by approximately 60% and improving onboarding consistency.</li>
+      <li>Replaced third-party PaySky mPOS system with an in-house ASP.NET Core solution for IPG merchants, reducing licensing cost and enabling custom payment flow control.</li>
+      <li>Integrated liveness facial recognition API for KYC/AML compliance in the digital onboarding pipeline.</li>
+    </ul>
+  </div>
 
-            <div class="skill-category">
-                <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Microsoft Azure</span>
-                    <span class="skill-tag">App Service</span>
-                    <span class="skill-tag">Azure Functions</span>
-                    <span class="skill-tag">Azure DevOps</span>
-                    <span class="skill-tag">CI/CD Pipelines</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Kubernetes</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Bitbucket</span>
-                </div>
-            </div>
+  <div class="glass exp-card">
+    <div class="exp-top">
+      <div><div class="exp-role">Software Engineer</div><div class="exp-co">KCompute (Private) Ltd | Pakistan</div></div>
+      <div class="exp-date">Sep 2020 — Sep 2022</div>
+    </div>
+    <ul>
+      <li>Maintained and enhanced enterprise .NET applications supporting the GoldenCare Long-Term Care and Medicare insurance platform, resolving 5–10 Jira tickets daily across bug fixes, feature enhancements, and performance optimization while ensuring application stability and timely delivery.</li>
+      <li>Partnered with QA and business stakeholders to deliver high-quality software releases by resolving production issues, supporting User Acceptance Testing (UAT), and implementing performance improvements that enhanced the overall reliability and responsiveness of the SerView.ae platform.</li>
+      <li>Designed and implemented an automated low-rating feedback notification system that generated real-time email alerts for survey creators and platform administrators, improving customer satisfaction monitoring and accelerating response to negative feedback.</li>
+      <li>Developed a customizable image-based rating feature, allowing clients to replace standard emoji ratings with organization-specific branded images, improving user experience and supporting customer branding requirements.</li>
+    </ul>
+  </div>
+</section>
 
-            <div class="skill-category">
-                <h3><i class="fas fa-database"></i> Data & Caching</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">SQL Server</span>
-                    <span class="skill-tag">Oracle</span>
-                    <span class="skill-tag">T-SQL</span>
-                    <span class="skill-tag">Entity Framework Migrations</span>
-                    <span class="skill-tag">Redis</span>
-                    <span class="skill-tag">SSRS</span>
-                    <span class="skill-tag">SSIS</span>
-                </div>
-            </div>
+<section class="section">
+  <div class="section-head"><h2>Impact Metrics</h2><div class="line"></div></div>
+  <div class="stats">
+    <div class="glass stat-card"><div class="stat-num">96%</div><div class="stat-label">Performance Gain</div></div>
+    <div class="glass stat-card"><div class="stat-num">40%</div><div class="stat-label">Maintenance Cut</div></div>
+    <div class="glass stat-card"><div class="stat-num">35%</div><div class="stat-label">API Speed Boost</div></div>
+    <div class="glass stat-card"><div class="stat-num">60%</div><div class="stat-label">Effort Reduction</div></div>
+    <div class="glass stat-card"><div class="stat-num">80%</div><div class="stat-label">Automation Gain</div></div>
+    <div class="glass stat-card"><div class="stat-num">4</div><div class="stat-label">Gateways Integrated</div></div>
+  </div>
+</section>
 
-            <div class="skill-category">
-                <h3><i class="fas fa-credit-card"></i> Payment & Integrations</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Ngenius</span>
-                    <span class="skill-tag">UAE Pay</span>
-                    <span class="skill-tag">Stripe</span>
-                    <span class="skill-tag">Naqodi</span>
-                    <span class="skill-tag">SendGrid</span>
-                    <span class="skill-tag">Emirates ID API</span>
-                    <span class="skill-tag">Facial Recognition</span>
-                </div>
-            </div>
+<section class="section">
+  <div class="section-head"><h2>Education & Certs</h2><div class="line"></div></div>
+  <div class="edu-cert">
+    <div class="glass edu-box">
+      <h4>Bachelor of Computer Science</h4>
+      <p>University of Sindh, Jamshoro | Graduated December 2021</p>
+    </div>
+    <div class="glass edu-box">
+      <h4>Professional Development</h4>
+      <p>Microsoft Dynamics 365 CRM · Docker & Kubernetes · Blazor Server/WASM · Azure Cloud Services</p>
+      <p style="margin-top:.5rem;color:var(--muted)">Agile/Scrum · Test-Driven Development · CI/CD Best Practices</p>
+    </div>
+  </div>
+</section>
 
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Frontend (Supporting)</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Angular 14+</span>
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">jQuery</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3><i class="fas fa-tools"></i> Testing & Tools</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Unit Testing</span>
-                    <span class="skill-tag">Postman</span>
-                    <span class="skill-tag">Swagger/OpenAPI</span>
-                    <span class="skill-tag">Visual Studio</span>
-                    <span class="skill-tag">VS Code</span>
-                    <span class="skill-tag">JIRA</span>
-                    <span class="skill-tag">Agile/Scrum</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2 class="section-title gradient-text">Professional Experience</h2>
-        <p class="section-subtitle">5+ Years Across FinTech, Banking & Government Digital Transformation</p>
-        
-        <div class="experience-item fade-in">
-            <div class="experience-header">
-                <div>
-                    <div class="experience-title">Senior .NET Developer</div>
-                    <div class="experience-company">Smart Works for Information Systems | Abu Dhabi, UAE</div>
-                </div>
-                <div class="experience-date">May 2025 – May 2026</div>
-            </div>
-            <ul class="experience-description">
-                <li>Integrated 4 payment gateways (Ngenius, UAE Pay, Stripe, Naqodi) into legacy VB.NET ticket sales system for SZF (Sharjah National Events), processing high-volume transactions with enhanced PCI-compliant security flows.</li>
-                <li>Modernised 3 core MOEI (UAE Ministry of Energy & Infrastructure) legacy services to ASP.NET Core 8, achieving 40% reduction in maintenance overhead and improving system reliability for critical government platform.</li>
-                <li>Designed and deployed a configurable ASP.NET Core Middleware API with unified endpoint architecture, leveraging DB-stored configurations to execute stored procedures dynamically — enabling scalable, JSON-centric data processing pipelines without code redeployment.</li>
-                <li>Developed a full Sports Lottery System for SZF events covering participant registration, voting engine, admin tally, winner selection, and prize distribution workflows.</li>
-                <li>Implemented SendGrid transactional email integration for automated payment confirmations and compliance notifications, reducing manual outreach by 80%.</li>
-                <li>Developed a Jira-inspired Smart Help Desk System using ASP.NET Core MVC, C#, SQL Server, Entity Framework Core, and SignalR, supporting ticket management, project tracking, sprint workflows, user management, dashboards, and enterprise RBAC.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item fade-in">
-            <div class="experience-header">
-                <div>
-                    <div class="experience-title">.NET Developer</div>
-                    <div class="experience-company">HNW Research and Management Consultancy | Abu Dhabi, UAE</div>
-                </div>
-                <div class="experience-date">Oct 2024 – May 2025</div>
-            </div>
-            <ul class="experience-description">
-                <li>Architected and delivered a digital CX Improvement Hub serving 12 Abu Dhabi government entities, enabling tracking of 200+ KPIs and automated multi-step approval workflows using ASP.NET Core, Entity Framework, and Clean Architecture principles.</li>
-                <li>Built real-time project progress dashboards with Gantt chart visualisations for government programme managers, improving cross-entity project visibility.</li>
-                <li>Designed and implemented a digital services catalogue with role-based access and configurable service templates, streamlining public sector service onboarding.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item fade-in">
-            <div class="experience-header">
-                <div>
-                    <div class="experience-title">.NET Developer</div>
-                    <div class="experience-company">NexGen Technologies LLC | Dubai, UAE</div>
-                </div>
-                <div class="experience-date">May 2024 – Sep 2024</div>
-            </div>
-            <ul class="experience-description">
-                <li>Reduced average API response time by 35% across Time & Attendance, HRMS, and Visitor Management systems by profiling bottlenecks and implementing targeted optimisations — directly improving experience for 500+ daily users.</li>
-                <li>Developed an Emirates ID card reader integration into the visitor management system, cutting check-in processing time and improving gate security compliance.</li>
-                <li>Implemented a QR code badge printing system for visitor management, eliminating manual badge creation and reducing gate access delays.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item fade-in">
-            <div class="experience-header">
-                <div>
-                    <div class="experience-title">Mid-Level Software Engineer</div>
-                    <div class="experience-company">HBL Innovation Center | Karachi, Pakistan</div>
-                </div>
-                <div class="experience-date">Oct 2022 – Oct 2023</div>
-            </div>
-            <ul class="experience-description">
-                <li>96% performance improvement: Re-architected the blacklist screening service from sequential scan to optimised indexed query strategy, reducing processing time from 4+ hours to 10 minutes — directly unblocking merchant onboarding SLAs.</li>
-                <li>Designed and implemented standardised digital onboarding workflows for 5 HBL merchant payment products (POS, QR, Direct Transfer, IPG, Konnect Agent), reducing manual onboarding effort by ~60%.</li>
-                <li>Replaced third-party PaySky mPOS system with an in-house ASP.NET Core solution for IPG merchants, reducing licensing cost and enabling custom payment flow control.</li>
-                <li>Integrated liveness facial recognition API for KYC/AML compliance in the digital onboarding pipeline.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item fade-in">
-            <div class="experience-header">
-                <div>
-                    <div class="experience-title">Software Engineer (.NET)</div>
-                    <div class="experience-company">KCompute (Private) Ltd | Karachi, Pakistan</div>
-                </div>
-                <div class="experience-date">Sep 2021 – Sep 2022</div>
-            </div>
-            <ul class="experience-description">
-                <li>Delivered 5–10 JIRA tickets per day for GoldenCare insurance brokerage products covering Long-Term Care and Medicare solutions across resolution, feature delivery, and performance improvements.</li>
-                <li>Developed automated low-rating feedback notification system for the SurView.AE platform, triggering real-time email alerts to clients and platform owners on negative survey responses.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Education & Certifications -->
-    <section id="education">
-        <h2 class="section-title gradient-text">Education & Continuous Learning</h2>
-        <p class="section-subtitle">Academic Foundation & Professional Development</p>
-        
-        <div class="education-grid">
-            <div class="education-card fade-in">
-                <div class="education-degree">Bachelor of Computer Science</div>
-                <div class="education-school">University of Sindh, Jamshoro</div>
-                <div class="education-details">
-                    Graduated: December 2021<br>
-                    Focus on Software Engineering & System Design
-                </div>
-            </div>
-
-            <div class="education-card fade-in">
-                <div class="education-degree">Currently Learning</div>
-                <div class="education-school">Professional Development</div>
-                <div class="education-details">
-                    Microsoft Dynamics 365 CRM<br>
-                    Docker & Kubernetes<br>
-                    Blazor Server/WASM
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contact">
-        <div class="cta-section">
-            <div class="cta-content">
-                <h2 class="cta-title gradient-text">Let's Build Something Amazing</h2>
-                <p class="cta-text">Seeking Senior .NET Developer opportunities with focus on Clean Architecture, Payment Systems, and Government Digital Transformation. Open to GCC relocation and European opportunities.</p>
-                
-                <div class="hero-buttons">
-                    <a href="mailto:faizmuhammadmarri@gmail.com" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i> Email Me
-                    </a>
-                    <a href="https://linkedin.com/in/faiz-mari" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-linkedin-in"></i> LinkedIn Profile
-                    </a>
-                    <a href="https://github.com/Fai-M-Mari" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-github"></i> GitHub Projects
-                    </a>
-                </div>
-
-                <div style="margin-top: 2rem; color: #a0a0a0; font-size: 0.95rem;">
-                    <p style="margin-bottom: 0.5rem;">📧 <a href="mailto:faizmuhammadmarri@gmail.com" style="color: #00B4D8; text-decoration: none;">faizmuhammadmarri@gmail.com</a></p>
-                    <p style="margin-bottom: 0.5rem;">📱 <a href="tel:+923032213801" style="color: #00B4D8; text-decoration: none;">+92 303 2213801</a></p>
-                    <p style="margin-bottom: 0.5rem;">📍 Karachi, Pakistan (Open to GCC Relocation)</p>
-                    <p style="color: #7a7a7a; font-size: 0.85rem;">Available for immediate joining</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="https://linkedin.com/in/faiz-mari" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Fai-M-Mari" target="_blank">GitHub</a>
-                <a href="mailto:faizmuhammadmarri@gmail.com">Email</a>
-            </div>
-            <p>© 2025 Faiz Muhammad. Senior .NET Developer | All rights reserved.</p>
-            <p style="color: #7a7a7a; font-size: 0.9rem; margin-top: 0.5rem;">Designed & Built for Professional Excellence</p>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when a link is clicked
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if(target) {
-                    target.scrollIntoView({behavior: 'smooth', block: 'start'});
-                }
-            });
-        });
-    </script>
+<footer>
+  <p>Faiz Muhammad — Senior Backend Engineer (.NET) | Open to GCC, Europe & SG</p>
+</footer>
+</div>
 </body>
 </html>
