@@ -40,11 +40,10 @@
 ---
 
 ### 💼 Professional Experience Highlights
-- **Senior .NET Developer** — Smart Works (Abu Dhabi) | May 2025 – Present
-- **.NET Developer** — HNW Research (Abu Dhabi) | Oct 2024 – May 2025
-- **.NET Developer** — NexGen Technologies (Dubai) | May–Sep 2024
-- **Mid-Level Software Engineer** — HBL Innovation Center (Karachi) | 2022–2023
-
+- **Senior .NET Developer** — Smart Works (Abu Dhabi) | May 2025 – May 2026
+- **.NET Developer** — HNW Research (Abu Dhabi) | May 2024 – May 2025 
+- **Software Engineer** — Winklin (Contract to HBL Bank) (Pakistan, Karachi) | 2022–2023
+- **Software Engineer** — KCompute (Private) Ltd (Pakistan, Karachi) | Sep 2020 – Sep 2022
 ---
 
 ### 🌟 Featured Projects
