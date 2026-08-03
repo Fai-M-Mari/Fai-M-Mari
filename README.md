@@ -7,7 +7,7 @@
 - **Currently**: Senior .NET Developer at Smart Works for Information Systems (Abu Dhabi)
 - **Open to**: GCC / Europe opportunities (Immediate joiner)
 - **Email**: faizmuhammadmarri@gmail.com | **Phone**: +92 303 2213801
-- **LinkedIn**: [linkedin.com/in/faiz-mari](https://linkedin.com/in/faiz-mari) | **CV**: [Download](https://github.com/Fai-M-Mari/Fai-M-Mari/raw/main/docs/Faiz%20Muhammad%20Net%20Developer%2028-07-2026.docx)
+- **LinkedIn**: [linkedin.com/in/faiz-mari](https://linkedin.com/in/faiz-mari) | **CV**: [Download](https://github.com/Faiz-Baloch/Fai-M-Mari/raw/main/docs/Faiz%20Muhammad%20Net%20Developer%2028-07-2024.pdf)
 
 ---
 
@@ -22,6 +22,7 @@
 ### 🛠️ Technical Stack
 
 **Backend & .NET**
+
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
 
@@ -48,7 +49,7 @@
 
 ### 🌟 Featured Projects
 
-#### 1. **[RES_System](https://github.com/Fai-M-Mari/RES_System)** - Multi-Tenant Real Estate Management System
+#### 1. **[RES_System](https://github.com/Faiz-Baloch/RES_System)** - Multi-Tenant Real Estate Management System
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 - **Tech Stack**: ASP.NET Core, Entity Framework Core, SQL Server, Angular
 - **Architecture**: Microservices with Multi-Tenant support
@@ -58,9 +59,8 @@
   - Automated billing & payments
   - Real-time notifications
   - Role-based access control (RBAC)
-- **Impact**: Simplified real estate operations for multiple organizations simultaneously
 
-#### 2. **[EmailSenderAPI](https://github.com/Fai-M-Mari/EmailSenderAPI)** - Enterprise Email Service
+#### 2. **[EmailSenderAPI](https://github.com/Faiz-Baloch/EmailSenderAPI)** - Enterprise Email Service
 ![Status](https://img.shields.io/badge/Status-Production-blue)
 - **Tech Stack**: ASP.NET Core, SendGrid Integration, Redis Caching
 - **Features**:
@@ -71,7 +71,7 @@
   - Retry mechanism for failed sends
 - **Use Cases**: Transactional emails, bulk campaigns, notifications
 
-#### 3. **[EmailExtractionFrmSites_Tool](https://github.com/Fai-M-Mari/EmailExtractionFrmSites_Tool)** - Web Scraping Utility
+#### 3. **[EmailExtractionFrmSites_Tool](https://github.com/Faiz-Baloch/EmailExtractionFrmSites_Tool)** - Web Scraping Utility
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 - **Tech Stack**: C#, Web Scraping, Regex Pattern Matching
 - **Functionality**:
@@ -81,7 +81,7 @@
   - Batch processing
 - **Application**: Sales & marketing lead generation
 
-#### 4. **[Mess-Managment-System](https://github.com/Fai-M-Mari/Mess-Managment-System)** - University Hostel Finance Management
+#### 4. **[Mess-Managment-System](https://github.com/Faiz-Baloch/Mess-Managment-System)** - University Hostel Finance Management
 ![Status](https://img.shields.io/badge/Status-Archived-lightgrey)
 - **Tech Stack**: C#, Windows Forms, SQL Server
 - **Features**:
@@ -93,7 +93,7 @@
 - **Impact**: Simplified financial management for 50+ students across multiple messes
 - **Year**: 2020 - University Project
 
-#### 5. **[Rdlc_Demo](https://github.com/Fai-M-Mari/Rdlc_Demo)** - Reporting & Analytics Demo
+#### 5. **[Rdlc_Demo](https://github.com/Faiz-Baloch/Rdlc_Demo)** - Reporting & Analytics Demo
 ![Status](https://img.shields.io/badge/Status-Reference-orange)
 - **Tech Stack**: RDLC Reports, SQL Server, C#
 - **Purpose**: 
@@ -102,7 +102,7 @@
   - Chart visualizations
   - Export to PDF/Excel
 
-#### 6. **[SindhiBarth](https://github.com/Fai-M-Mari/SindhiBarth)** - Cultural Event Platform
+#### 6. **[SindhiBarth](https://github.com/Faiz-Baloch/SindhiBarth)** - Cultural Event Platform
 ![Status](https://img.shields.io/badge/Status-Archived-lightgrey)
 - **Tech Stack**: JavaScript, HTML5, CSS3, Node.js Backend
 - **Features**: Event booking, user management, cultural content showcase
@@ -112,21 +112,21 @@
 
 ### 📊 GitHub Stats
 
-![Faiz's GitHub stats](https://github-readme-stats.vercel.app/api?username=Fai-M-Mari&show_icons=true&theme=radical)
+![Faiz's GitHub stats](https://github-readme-stats.vercel.app/api?username=Faiz-Baloch&show_icons=true&theme=radical)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Fai-M-Mari&layout=compact&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Faiz-Baloch&layout=compact&theme=radical)
 
 ---
 
 ### 📈 Repository Statistics
 | Project | Language | Status | Stars | Forks |
 |---------|----------|--------|-------|-------|
-| [RES_System](https://github.com/Fai-M-Mari/RES_System) | HTML/ASP.NET | Active | ⭐ | 🍴 |
-| [EmailSenderAPI](https://github.com/Fai-M-Mari/EmailSenderAPI) | C# | Production | ⭐ | 🍴 |
-| [EmailExtractionFrmSites_Tool](https://github.com/Fai-M-Mari/EmailExtractionFrmSites_Tool) | C# | Active | ⭐ | 🍴 |
-| [Mess-Managment-System](https://github.com/Fai-M-Mari/Mess-Managment-System) | C# | Archived | ⭐ | 🍴 |
-| [Rdlc_Demo](https://github.com/Fai-M-Mari/Rdlc_Demo) | JavaScript | Reference | ⭐ | 🍴 |
-| [SindhiBarth](https://github.com/Fai-M-Mari/SindhiBarth) | JavaScript | Community | ⭐ | 🍴 |
+| [RES_System](https://github.com/Faiz-Baloch/RES_System) | HTML/ASP.NET | Active | ⭐ | 🍴 |
+| [EmailSenderAPI](https://github.com/Faiz-Baloch/EmailSenderAPI) | C# | Production | ⭐ | 🍴 |
+| [EmailExtractionFrmSites_Tool](https://github.com/Faiz-Baloch/EmailExtractionFrmSites_Tool) | C# | Active | ⭐ | 🍴 |
+| [Mess-Managment-System](https://github.com/Faiz-Baloch/Mess-Managment-System) | C# | Archived | ⭐ | 🍴 |
+| [Rdlc_Demo](https://github.com/Faiz-Baloch/Rdlc_Demo) | JavaScript | Reference | ⭐ | 🍴 |
+| [SindhiBarth](https://github.com/Faiz-Baloch/SindhiBarth) | JavaScript | Community | ⭐ | 🍴 |
 
 ---
 
